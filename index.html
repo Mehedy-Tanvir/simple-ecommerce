@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="grid grid-cols-1 md:grid-cols-2">
+      <div class="grid items-center grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="shadow-xl card bg-base-100">
+          <figure>
+            <img src="./images/shoes.avif" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>prices: <span id="shoe-price">100</span> $</p>
+            <div class="justify-end card-actions">
+              <button class="btn btn-primary" onclick="onClickHandler(this)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-xl card bg-base-100">
+          <figure>
+            <img src="./images/perfume.avif" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Perfumes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>prices: <span id="perfume-price">100</span> $</p>
+            <div class="justify-end card-actions">
+              <button class="btn btn-primary" onclick="onClickHandler(this)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-xl card bg-base-100">
+          <figure>
+            <img
+              src="./images/elegant-businessman-shirt-wooden-desk-stack-generated-by-ai_188544-34678.avif"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Shirts!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>prices: <span id="shirt-price">60</span> $</p>
+            <div class="justify-end card-actions">
+              <button class="btn btn-primary" onclick="onClickHandler(this)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-xl card bg-base-100">
+          <figure>
+            <img src="./images/hoodies.avif" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Hoodies!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>prices: <span id="hoodie-price">40</span> $</p>
+            <div class="justify-end card-actions">
+              <button class="btn btn-primary" onclick="onClickHandler(this)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-xl card bg-base-100">
+          <figure>
+            <img
+              src="./images/shiny-black-leather-shoes-exude-modern-luxury-generated-by-ai_188544-36154.avif"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Leather Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>prices: <span id="lether-shoe-price">200</span> $</p>
+            <div class="justify-end card-actions">
+              <button class="btn btn-primary" onclick="onClickHandler(this)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-xl card bg-base-100">
+          <figure>
+            <img
+              src="./images/blue-yellow-t-shirt-wooden-hanger-generated-by-ai_188544-42185.avif"
+              alt="Shoes"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">TShirts!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>prices: <span id="tshirt-price">20</span> $</p>
+            <div class="justify-end card-actions">
+              <button class="btn btn-primary" onclick="onClickHandler(this)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cart" class="flex flex-col mt-12">
+        <h1 class="text-4xl font-bold text-center">My Cart</h1>
+        <div
+          class="flex flex-col items-center justify-center hidden mt-4"
+          id="coupon-content"
+        >
+          <p class="text-4xl text-center">
+            Total:
+            <span class="text-4xl font-bold text-red-400" id="total-price"
+              >00</span
+            >
+          </p>
+          <input
+            class="w-9/12 p-4 mt-5 text-xl text-center bg-gray-200 rounded-lg"
+            type="text"
+            placeholder="coupon"
+            onkeyup="couponHandler(this)"
+          />
+          <button
+            class="w-9/12 mt-4 text-white btn-success btn btn-disabled"
+            onclick="couponBtnHandler()"
+            id="btn-coupon"
+          >
+            Apply
+          </button>
+        </div>
+      </div>
+      <script src="./index.js"></script>
+    </main>
+  </body>
+</html>
